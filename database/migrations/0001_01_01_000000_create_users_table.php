@@ -17,6 +17,12 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+
+            $table->string('role')->default('cliente'); // Para saber si es admin o cliente
+            $table->string('google_id')->nullable();    // Para el login con Google
+            $table->text('avatar')->nullable();         // Para la foto de perfil
+            $table->string('phone')->nullable();
+            
             $table->rememberToken();
             $table->timestamps();
         });
