@@ -22,9 +22,12 @@ return new class extends Migration
             $table->string('google_id')->nullable();    // Para el login con Google
             $table->text('avatar')->nullable();         // Para la foto de perfil
             $table->string('phone')->nullable();
+            $table->string('city')->nullable();
+            $table->text('address')->nullable();
             
             $table->rememberToken();
             $table->timestamps();
+            
         });
 
         Schema::create('password_reset_tokens', function (Blueprint $table) {

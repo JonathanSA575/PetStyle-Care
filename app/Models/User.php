@@ -19,8 +19,9 @@ class User extends Authenticatable
         'password',
         'google_id',
         'avatar',
-        'role',
-        'phone',
+        'phone',    // <--- Nuevo
+        'city',     // <--- Nuevo
+        'address',  // <--- Nuevo
     ];
 
     /**
